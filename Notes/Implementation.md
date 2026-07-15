@@ -29,8 +29,6 @@ Initially thought of using separate counters.
 
 Forgot Java for-loop syntax.
 
-Forgot Java requires public class Main.
-
 ### Lesson
 
 Whenever values are binary (0/1),
