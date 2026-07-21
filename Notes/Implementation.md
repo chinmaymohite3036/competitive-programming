@@ -25,6 +25,7 @@ adding them directly gives the number of people satisfying the condition.
 
 ### Mistake
 Initially thought of using separate counters.
+  
 
 ---
 
@@ -72,3 +73,53 @@ Forgot Java for-loop syntax.
 
 Whenever values are binary (0/1),
 their sum can often directly represent the count of true conditions.
+
+---
+
+## Problem: 791A - Bear and Big Brother)
+
+### Pattern
+
+Simulation using While Loop
+
+### When to Think of This Pattern
+
+- The number of iterations is unknown.
+- Repeat an operation until a condition becomes true.
+- Values change after every iteration.
+
+### Key Observation
+
+The answer is not calculated directly.
+
+Instead, simulate each year until Limak becomes heavier than Bob.
+
+### Formula
+
+None
+
+### Java Concepts Used
+
+- while loop
+- int
+- Multiplication
+- Counter Variable
+
+### Mistake I Made
+
+None.
+
+Recognized that the number of iterations was unknown, so a while loop was the correct choice.
+
+### Lesson
+
+Ask yourself:
+"When does this process stop?"
+
+If the stopping point depends on changing values, think of a while loop.
+
+### Similar Problems
+
+- Population Growth
+- Compound Interest Simulation
+- Repeated Process Problems
