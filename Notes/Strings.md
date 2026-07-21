@@ -42,4 +42,64 @@ Before coding, ask:
 
 ### Similar Problems
 
-(Add here whenever you solve another problem that uses the same pattern.)
+To be added later
+
+---
+
+## Problem 112A : Petya and Strings
+
+### Pattern
+
+Lexicographical String Comparison
+
+### When to Think of This Pattern
+
+- Compare two strings alphabetically (dictionary order).
+- The problem asks whether one string is smaller, greater, or equal.
+- Case-insensitive string comparison.
+
+### Key Observation
+
+The problem states that uppercase and lowercase letters should be treated as the same.
+
+Instead of comparing characters manually, convert both strings to the same case (lowercase) and use Java's built-in `compareTo()` method.
+
+### Formula 
+
+compareTo()
+
+Returns:
+- Negative → First string is smaller
+- Zero → Strings are equal
+- Positive → First string is greater
+
+Output:
+- ans < 0 → -1
+- ans == 0 → 0
+- ans > 0 → 1
+
+### Java Concepts Used
+
+- String
+- Scanner
+- toLowerCase()
+- compareTo()
+- if-else
+
+### Mistake I Made
+
+Initially planned to compare characters one by one using loops.
+
+Later realized Java already provides `compareTo()`, which is simpler and less error-prone.
+
+### Lesson
+
+Before implementing a common operation manually, think:
+"Does Java already provide a built-in method for this?"
+
+### Similar Problems
+
+- Dictionary Order Problems
+
+
+
