@@ -25,6 +25,10 @@ Maximum Dominoes = (M × N) / 2 (integer division)
 
 Initially, it looked like a simulation problem, but no simulation was needed.
 
+### Similar Problems
+
+- Codeforces 50A - Domino Piling
+- Problems involving packing or grouping fixed-size objects
 
 ---
 ## 546A - Soldier and Bananas
@@ -82,9 +86,63 @@ Before writing a loop, ask:
 - Codeforces 546A - Soldier and Bananas
 - Arithmetic Progression
 - Sum Formula Problems
-"Can I derive the answer mathematically?"
+
+---
+
+## 617A - Elephant
+
+### Pattern
+
+Ceiling Division / Mathematical Observation
+
+### When to Think of This Pattern
+
+- Find the minimum number of moves.
+- Each move can cover at most K units.
+- Minimum trips, boxes, groups, or jumps.
+
+### Key Observation
+
+The elephant should always take the maximum possible step (5).
+
+If the remaining distance is not divisible by 5, one extra step is needed.
+
+Instead of checking the remainder separately, use ceiling division.
+
+### Formula
+
+General Formula:
+
+(x + k - 1) / k
+
+For this problem:
+
+(x + 4) / 5
+
+### Java Concepts Used
+
+- Integer Division
+- Modulus (%)
+- Arithmetic Operators
+
+### Mistake I Made
+
+Initially used:
+
+(x / 5) + 1
+
+This failed when x was already divisible by 5 (e.g., x = 5).
+
+Learned that the extra step is required only when there is a remainder.
+
+### Lesson
+
+Whenever the problem asks for the minimum number of fixed-size moves, think of Ceiling Division.
 
 ### Similar Problems
 
-- Codeforces 50A - Domino Piling
-- Problems involving packing or grouping fixed-size objects
+- Codeforces 617A - Elephant
+- Minimum Trips
+- Minimum Groups
+- Ceiling Division Problems
+"Can I derive the answer mathematically?"
