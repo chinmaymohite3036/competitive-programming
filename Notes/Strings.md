@@ -101,5 +101,61 @@ Before implementing a common operation manually, think:
 
 - Dictionary Order Problems
 
+---
+
+## 59A - Word
+
+### Pattern
+
+Counting + String Manipulation
+
+### When to Think of This Pattern
+
+- Need to compare the frequency of two types of characters.
+- The final action depends on the counts.
+- The problem asks to convert or modify the entire string after analysis.
+
+### Key Observation
+
+Traverse the string once and count uppercase and lowercase letters separately.
+
+After counting, make one decision:
+
+- Uppercase > Lowercase → convert entire string to uppercase.
+- Otherwise → convert to lowercase.
 
 
+### Java Concepts Used
+
+- String
+- char
+- charAt()
+- Character.isUpperCase()
+- toUpperCase()
+- toLowerCase()
+- for loop
+
+### Mistake I Made
+
+Initially tried to use:
+
+character.isUpperCase()
+
+Learned that `char` is a primitive type.
+
+The correct method is:
+
+Character.isUpperCase(character)
+
+### Lesson
+
+Before modifying an entire string,
+first collect all the information you need.
+
+Then make a single decision.
+
+### Similar Problems
+
+- Codeforces 59A - Word
+- Character Counting
+- String Case Conversion
