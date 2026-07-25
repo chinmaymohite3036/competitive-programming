@@ -159,3 +159,52 @@ Then make a single decision.
 - Codeforces 59A - Word
 - Character Counting
 - String Case Conversion
+
+---
+
+## 281A - Word Capitalization
+
+### Pattern
+
+String Manipulation
+
+### When to Think of This Pattern
+
+- Only the first character needs modification.
+- The remaining part of the string stays unchanged.
+- The problem asks to capitalize or alter only the beginning of a string.
+
+### Key Observation
+
+There is no need to traverse the whole string.
+
+Modify the first character if required and append the remaining substring unchanged.
+
+### Formula (if applicable)
+
+None
+
+### Java Concepts Used
+
+- charAt()
+- Character.isLowerCase()
+- Character.toUpperCase()
+- substring()
+
+### Mistake I Made
+
+None.
+
+### Lesson
+
+Before using a loop, ask:
+
+"Do I really need to inspect every character?"
+
+Sometimes only a specific position matters.
+
+### Similar Problems
+
+- Codeforces 281A - Word Capitalization
+- String Formatting
+- First Character Manipulation
