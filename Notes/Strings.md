@@ -208,3 +208,65 @@ Sometimes only a specific position matters.
 - Codeforces 281A - Word Capitalization
 - String Formatting
 - First Character Manipulation
+
+---
+
+## Consecutive Streak Counting (96A - Football)
+
+### Pattern
+
+Consecutive Streak Counting
+
+### When to Think of This Pattern
+
+- Find consecutive equal characters.
+- Continuous sequence.
+- Adjacent repetition.
+- Longest streak.
+
+### Key Observation
+
+Do not count equal pairs.
+
+Count the length of the current consecutive streak.
+
+When the character changes,
+the new character starts a new streak of length 1.
+
+If the streak reaches the required length,
+the answer is already known.
+
+### Logic
+
+currentStreak = 1
+
+if (current == previous)
+    currentStreak++
+else
+    currentStreak = 1
+
+### Java Concepts Used
+
+- String
+- charAt()
+- for loop
+- Early return
+
+### Mistake I Made
+
+Initially counted adjacent equal pairs.
+
+Also reset the counter to 0 instead of 1 when the streak broke.
+
+Checked the answer only after the loop instead of as soon as the streak reached 7.
+
+### Lesson
+
+Whenever the problem mentions "consecutive" or "continuous",
+think in terms of the current streak, not the total count.
+
+### Similar Problems
+
+- Codeforces 96A - Football
+- Longest Consecutive Sequence
+- Consecutive Characters
