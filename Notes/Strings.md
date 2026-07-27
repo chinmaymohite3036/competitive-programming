@@ -209,47 +209,22 @@ Sometimes only a specific position matters.
 - String Formatting
 - First Character Manipulation
 
-<<<<<<< HEAD
---- 
-
-## 266A - Stones on the Table
-
-### Pattern
-
-Adjacent Duplicate Counting
-
-### When to Think of This Pattern
-
-- Count how many adjacent elements are the same.
-- Determine the minimum removals to eliminate consecutive duplicates.
-- Compare neighboring characters only.
-
-### Key Observation
-
-Every pair of adjacent equal characters means one stone must be removed.
-
-Unlike consecutive streak problems, we simply count every adjacent duplicate.
-
-### Logic
-
-s.charAt(i) == s.charAt(i + 1)
-=======
 ---
 
-## Consecutive Streak Counting (96A - Football)
+# 96A - Football
 
-### Pattern
+## Pattern
 
 Consecutive Streak Counting
 
-### When to Think of This Pattern
+## When to Think of This Pattern
 
 - Find consecutive equal characters.
 - Continuous sequence.
 - Adjacent repetition.
 - Longest streak.
 
-### Key Observation
+## Key Observation
 
 Do not count equal pairs.
 
@@ -261,45 +236,18 @@ the new character starts a new streak of length 1.
 If the streak reaches the required length,
 the answer is already known.
 
-### Logic
+## Formula
 
-currentStreak = 1
+None
 
-if (current == previous)
-    currentStreak++
-else
-    currentStreak = 1
->>>>>>> cc83e5e2ff7ca899924988a18d48ed2b9af075e3
-
-### Java Concepts Used
+## Java Concepts Used
 
 - String
 - charAt()
 - for loop
-<<<<<<< HEAD
-- Counter
-
-### Mistake I Made
-
-None.
-
-Recognized that this pattern was similar to Football, but identified that the required output was different.
-
-### Lesson
-
-Two problems may look similar but ask different questions.
-
-Always identify what the counter should represent.
-
-### Similar Problems
-
-- Codeforces 266A - Stones on the Table
-- Adjacent Duplicate Problems
-- String Traversal
-=======
 - Early return
 
-### Mistake I Made
+## Mistake I Made
 
 Initially counted adjacent equal pairs.
 
@@ -307,7 +255,7 @@ Also reset the counter to 0 instead of 1 when the streak broke.
 
 Checked the answer only after the loop instead of as soon as the streak reached 7.
 
-### Lesson
+## Lesson
 
 Whenever the problem mentions "consecutive" or "continuous",
 think in terms of the current streak, not the total count.
@@ -317,4 +265,52 @@ think in terms of the current streak, not the total count.
 - Codeforces 96A - Football
 - Longest Consecutive Sequence
 - Consecutive Characters
->>>>>>> cc83e5e2ff7ca899924988a18d48ed2b9af075e3
+
+---
+
+# 266A - Stones on the Table
+
+## Pattern
+
+Adjacent Duplicate Counting
+
+## When to Think of This Pattern
+
+- Count how many adjacent elements are the same.
+- Determine the minimum removals to eliminate consecutive duplicates.
+- Compare neighboring characters only.
+
+## Key Observation
+
+Every pair of adjacent equal characters means one stone must be removed.
+
+Unlike consecutive streak problems, we simply count every adjacent duplicate.
+
+## Formula
+
+None
+
+## Java Concepts Used
+
+- String
+- charAt()
+- for loop
+- Counter
+
+## Mistake I Made
+
+None.
+
+Recognized that this pattern was similar to Football, but identified that the required output was different.
+
+## Lesson
+
+Two problems may look similar but ask different questions.
+
+Always identify what the counter should represent.
+
+## Similar Problems
+
+- Codeforces 266A - Stones on the Table
+- Adjacent Duplicate Problems
+- String Traversal
