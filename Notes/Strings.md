@@ -208,3 +208,52 @@ Sometimes only a specific position matters.
 - Codeforces 281A - Word Capitalization
 - String Formatting
 - First Character Manipulation
+
+--- 
+
+## 266A - Stones on the Table
+
+### Pattern
+
+Adjacent Duplicate Counting
+
+### When to Think of This Pattern
+
+- Count how many adjacent elements are the same.
+- Determine the minimum removals to eliminate consecutive duplicates.
+- Compare neighboring characters only.
+
+### Key Observation
+
+Every pair of adjacent equal characters means one stone must be removed.
+
+Unlike consecutive streak problems, we simply count every adjacent duplicate.
+
+### Logic
+
+s.charAt(i) == s.charAt(i + 1)
+
+### Java Concepts Used
+
+- String
+- charAt()
+- for loop
+- Counter
+
+### Mistake I Made
+
+None.
+
+Recognized that this pattern was similar to Football, but identified that the required output was different.
+
+### Lesson
+
+Two problems may look similar but ask different questions.
+
+Always identify what the counter should represent.
+
+### Similar Problems
+
+- Codeforces 266A - Stones on the Table
+- Adjacent Duplicate Problems
+- String Traversal
