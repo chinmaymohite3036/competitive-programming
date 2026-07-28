@@ -211,20 +211,20 @@ Sometimes only a specific position matters.
 
 ---
 
-# 96A - Football
+## 96A - Football
 
-## Pattern
+### Pattern
 
 Consecutive Streak Counting
 
-## When to Think of This Pattern
+### When to Think of This Pattern
 
 - Find consecutive equal characters.
 - Continuous sequence.
 - Adjacent repetition.
 - Longest streak.
 
-## Key Observation
+### Key Observation
 
 Do not count equal pairs.
 
@@ -236,18 +236,18 @@ the new character starts a new streak of length 1.
 If the streak reaches the required length,
 the answer is already known.
 
-## Formula
+### Formula
 
 None
 
-## Java Concepts Used
+### Java Concepts Used
 
 - String
 - charAt()
 - for loop
 - Early return
 
-## Mistake I Made
+### Mistake I Made
 
 Initially counted adjacent equal pairs.
 
@@ -255,7 +255,7 @@ Also reset the counter to 0 instead of 1 when the streak broke.
 
 Checked the answer only after the loop instead of as soon as the streak reached 7.
 
-## Lesson
+### Lesson
 
 Whenever the problem mentions "consecutive" or "continuous",
 think in terms of the current streak, not the total count.
@@ -268,49 +268,102 @@ think in terms of the current streak, not the total count.
 
 ---
 
-# 266A - Stones on the Table
+## 266A - Stones on the Table
 
-## Pattern
+### Pattern
 
 Adjacent Duplicate Counting
 
-## When to Think of This Pattern
+### When to Think of This Pattern
 
 - Count how many adjacent elements are the same.
 - Determine the minimum removals to eliminate consecutive duplicates.
 - Compare neighboring characters only.
 
-## Key Observation
+### Key Observation
 
 Every pair of adjacent equal characters means one stone must be removed.
 
 Unlike consecutive streak problems, we simply count every adjacent duplicate.
 
-## Formula
+### Formula
 
 None
 
-## Java Concepts Used
+### Java Concepts Used
 
 - String
 - charAt()
 - for loop
 - Counter
 
-## Mistake I Made
+### Mistake I Made
 
 None.
 
 Recognized that this pattern was similar to Football, but identified that the required output was different.
 
-## Lesson
+### Lesson
 
 Two problems may look similar but ask different questions.
 
 Always identify what the counter should represent.
 
-## Similar Problems
+### Similar Problems
 
 - Codeforces 266A - Stones on the Table
 - Adjacent Duplicate Problems
 - String Traversal
+
+---
+
+## 339A - Helpful Maths
+
+### Pattern
+
+Split → Process → Reconstruct
+
+### When to Think of This Pattern
+
+- Input is a string containing values separated by a delimiter.
+- You need to process each value individually.
+- The final output requires reconstructing the string.
+
+### Key Observation
+
+Instead of processing the string character by character,
+split it into an array.
+
+Perform the required operation (sorting).
+
+Rebuild the output in the required format.
+
+### Formula (if applicable)
+
+None
+
+### Java Concepts Used
+
+- split("\\+")
+- Arrays.sort()
+- String[]
+- print() vs println()
+
+### Mistake I Made
+
+Initially iterated using `s.length()` instead of `arr.length`.
+
+Printed '+' after the last element.
+
+Used `println()` instead of `print()`.
+
+### Lesson
+
+Whenever the input contains a separator like '+', ',', or ' ',
+consider splitting it into an array first.
+
+### Similar Problems
+
+- Codeforces 339A - Helpful Maths
+- CSV Parsing
+- Delimiter-based String Processing
