@@ -209,34 +209,9 @@ Sometimes only a specific position matters.
 - String Formatting
 - First Character Manipulation
 
-<<<<<<< HEAD
---- 
-
-## 266A - Stones on the Table
-
-### Pattern
-
-Adjacent Duplicate Counting
-
-### When to Think of This Pattern
-
-- Count how many adjacent elements are the same.
-- Determine the minimum removals to eliminate consecutive duplicates.
-- Compare neighboring characters only.
-
-### Key Observation
-
-Every pair of adjacent equal characters means one stone must be removed.
-
-Unlike consecutive streak problems, we simply count every adjacent duplicate.
-
-### Logic
-
-s.charAt(i) == s.charAt(i + 1)
-=======
 ---
 
-## Consecutive Streak Counting (96A - Football)
+## 96A - Football
 
 ### Pattern
 
@@ -261,42 +236,15 @@ the new character starts a new streak of length 1.
 If the streak reaches the required length,
 the answer is already known.
 
-### Logic
+### Formula
 
-currentStreak = 1
-
-if (current == previous)
-    currentStreak++
-else
-    currentStreak = 1
->>>>>>> cc83e5e2ff7ca899924988a18d48ed2b9af075e3
+None
 
 ### Java Concepts Used
 
 - String
 - charAt()
 - for loop
-<<<<<<< HEAD
-- Counter
-
-### Mistake I Made
-
-None.
-
-Recognized that this pattern was similar to Football, but identified that the required output was different.
-
-### Lesson
-
-Two problems may look similar but ask different questions.
-
-Always identify what the counter should represent.
-
-### Similar Problems
-
-- Codeforces 266A - Stones on the Table
-- Adjacent Duplicate Problems
-- String Traversal
-=======
 - Early return
 
 ### Mistake I Made
@@ -317,4 +265,105 @@ think in terms of the current streak, not the total count.
 - Codeforces 96A - Football
 - Longest Consecutive Sequence
 - Consecutive Characters
->>>>>>> cc83e5e2ff7ca899924988a18d48ed2b9af075e3
+
+---
+
+## 266A - Stones on the Table
+
+### Pattern
+
+Adjacent Duplicate Counting
+
+### When to Think of This Pattern
+
+- Count how many adjacent elements are the same.
+- Determine the minimum removals to eliminate consecutive duplicates.
+- Compare neighboring characters only.
+
+### Key Observation
+
+Every pair of adjacent equal characters means one stone must be removed.
+
+Unlike consecutive streak problems, we simply count every adjacent duplicate.
+
+### Formula
+
+None
+
+### Java Concepts Used
+
+- String
+- charAt()
+- for loop
+- Counter
+
+### Mistake I Made
+
+None.
+
+Recognized that this pattern was similar to Football, but identified that the required output was different.
+
+### Lesson
+
+Two problems may look similar but ask different questions.
+
+Always identify what the counter should represent.
+
+### Similar Problems
+
+- Codeforces 266A - Stones on the Table
+- Adjacent Duplicate Problems
+- String Traversal
+
+---
+
+## 339A - Helpful Maths
+
+### Pattern
+
+Split → Process → Reconstruct
+
+### When to Think of This Pattern
+
+- Input is a string containing values separated by a delimiter.
+- You need to process each value individually.
+- The final output requires reconstructing the string.
+
+### Key Observation
+
+Instead of processing the string character by character,
+split it into an array.
+
+Perform the required operation (sorting).
+
+Rebuild the output in the required format.
+
+### Formula (if applicable)
+
+None
+
+### Java Concepts Used
+
+- split("\\+")
+- Arrays.sort()
+- String[]
+- print() vs println()
+
+### Mistake I Made
+
+Initially iterated using `s.length()` instead of `arr.length`.
+
+Printed '+' after the last element.
+
+Used `println()` instead of `print()`.
+
+### Lesson
+
+Whenever the input contains a separator like '+', ',', or ' ',
+consider splitting it into an array first.
+
+### Similar Problems
+
+- Codeforces 339A - Helpful Maths
+- CSV Parsing
+- Delimiter-based String Processing
