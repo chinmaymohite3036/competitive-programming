@@ -76,7 +76,7 @@ their sum can often directly represent the count of true conditions.
 
 ---
 
-## Problem: 791A - Bear and Big Brother)
+## Problem: 791A - Bear and Big Brother
 
 ### Pattern
 
@@ -123,3 +123,52 @@ If the stopping point depends on changing values, think of a while loop.
 - Population Growth
 - Compound Interest Simulation
 - Repeated Process Problems
+
+---
+
+## Problem: 69A - Young Physicist
+
+### Pattern
+Running Sum / Stream Processing
+
+### When to Think of This Pattern
+- Input is processed once.
+- Previous values are never needed again.
+- Problem asks for a final aggregate (sum/count/min/max).
+- No sorting or revisiting elements is required.
+
+### Key Observation
+Instead of storing every input value, maintain running totals while reading the input.
+For vectors, sum each component independently.
+
+### Formula 
+sumX += x
+sumY += y
+sumZ += z
+
+Equilibrium exists only if:
+sumX == 0 && sumY == 0 && sumZ == 0
+
+### Java Concepts Used
+- Scanner
+- for loop
+- Running sum variables
+- Conditional (&&)
+
+### Mistakes
+Initially thought about storing vectors in an array.
+Later realized the vectors are never needed after updating the sums.
+
+### Lesson
+Before using an array, ask:
+1. Will I need this value later?
+2. Do I need to sort it?
+3. Can I update the answer while reading?
+
+If yes to the third question, an array may be unnecessary.
+
+### Similar Problems
+- Codeforces 69A – Young Physicist
+- Running sum problems
+- Running count problems
+- Prefix Sum (advanced version)
