@@ -367,3 +367,52 @@ consider splitting it into an array first.
 - Codeforces 339A - Helpful Maths
 - CSV Parsing
 - Delimiter-based String Processing
+
+---
+
+## Counting Categories (734A - Anton and Danik)
+
+### Pattern
+
+Counting Categories
+
+### When to Think of This Pattern
+
+- Input consists of characters representing categories.
+- The answer depends on comparing frequencies.
+- Only one traversal is needed.
+
+### Key Observation
+
+Traverse the string once.
+
+Count occurrences of each category.
+
+Compare the final counts to determine the result.
+
+### Formula (if applicable)
+
+None
+
+### Java Concepts Used
+
+- charAt()
+- Character comparison using 'A'
+- for loop
+- Counters
+
+### Mistake I Made
+
+Initially compared char with a String ("A" instead of 'A') during planning.
+
+### Lesson
+
+When `charAt()` is used, always compare with character literals (`' '`), not string literals (`" "`).
+
+Before introducing extra conditions, check whether the problem guarantees only specific input values.
+
+### Similar Problems
+
+- Codeforces 734A - Anton and Danik
+- Codeforces 59A - Word
+- Codeforces 231A - Team

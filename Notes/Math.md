@@ -146,3 +146,56 @@ Whenever the problem asks for the minimum number of fixed-size moves, think of C
 - Minimum Groups
 - Ceiling Division Problems
 "Can I derive the answer mathematically?"
+
+---
+
+## 110A - Nearly Lucky Number
+
+### Pattern
+
+Digit Extraction + Counting
+
+### When to Think of This Pattern
+
+- Process every digit of a number.
+- Count occurrences of specific digits.
+- Reverse traversal of digits is acceptable.
+
+### Key Observation
+
+Extract digits using `% 10` and remove them using `/= 10`.
+
+After counting lucky digits (4 or 7), check whether the count itself is lucky.
+
+### Formula
+
+digit = n % 10
+n /= 10
+
+### Java Concepts Used
+
+- long
+- while loop
+- Modulo (%)
+- Integer division (/)
+
+### Mistake I Made
+
+Initially thought every digit had to be lucky.
+
+Also considered using int, but the constraints require long.
+
+### Lesson
+
+Read the problem statement carefully.
+
+Sometimes the answer depends on the result of a count, not the original number.
+
+Always choose the data type based on constraints.
+
+### Similar Problems
+
+- Codeforces 110A - Nearly Lucky Number
+- Sum of Digits
+- Count Digits
+- Digit Frequency
