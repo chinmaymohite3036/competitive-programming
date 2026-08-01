@@ -172,3 +172,65 @@ If yes to the third question, an array may be unnecessary.
 - Running sum problems
 - Running count problems
 - Prefix Sum (advanced version)
+
+---
+
+## 677A - Vanya and Fence
+
+### Pattern
+
+Single Pass Processing / Running Total
+
+### When to Think of This Pattern
+
+- Each input element contributes independently to the answer.
+- Previous values are never needed again.
+- No sorting or revisiting elements is required.
+- The final answer can be updated while reading the input.
+
+### Key Observation
+
+Read one height at a time.
+
+Immediately determine whether it contributes a width of `1` or `2`, update the total width, and discard the height.
+
+There is no need to store all heights in an array.
+
+### Formula
+
+If `height > h
+width += 2
+Else
+width += 1`
+
+
+### Java Concepts Used
+
+- Scanner
+- for loop
+- Temporary variables
+- if-else
+- Running total
+
+### Mistake I Made
+
+Initially wondered whether the heights should be stored in an array or read using `hasNextInt()`.
+
+Later realized each height is used only once, so a temporary variable inside a `for` loop is sufficient.
+
+### Lesson
+
+Reading input is **not** the same as storing input.
+
+Before creating an array, ask:
+- Will I need this value later?
+- Can I compute the answer immediately after reading it?
+
+If the answer can be updated while reading, storing the input is usually unnecessary.
+
+### Similar Problems
+
+- Codeforces 677A - Vanya and Fence
+- Codeforces 69A - Young Physicist
+- Codeforces 734A - Anton and Danik
+- Codeforces 266A - Stones on the Table
