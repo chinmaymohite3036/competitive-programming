@@ -226,8 +226,6 @@ Before creating an array, ask:
 - Will I need this value later?
 - Can I compute the answer immediately after reading it?
 
-If the answer can be updated while reading, storing the input is usually unnecessary.
-
 ### Similar Problems
 
 - Codeforces 677A - Vanya and Fence
