@@ -232,3 +232,53 @@ Before creating an array, ask:
 - Codeforces 69A - Young Physicist
 - Codeforces 734A - Anton and Danik
 - Codeforces 266A - Stones on the Table
+
+---
+
+## Problem: 1030A - In Search of an Easy Problem
+
+### Pattern
+
+Early Termination / Flag Variable
+
+### When to Think of This Pattern
+
+- The answer can be determined before processing the entire input.
+- A single value is enough to decide the output.
+- Continuing after finding the answer does not change the result.
+
+### Key Observation
+
+As soon as a problem with type `1` is found, the answer is guaranteed to be `"HARD"`.
+
+There is no need to continue checking the remaining inputs.
+
+### Formula
+
+None
+
+### Java Concepts Used
+
+- boolean
+- for loop
+- if statement
+- break
+- Scanner
+
+### Mistake I Made
+
+None.
+
+Recognized the pattern immediately and solved it without requiring pen and paper.
+
+### Lesson
+
+When the answer becomes certain during traversal, stop immediately using `break`.
+
+Do not continue unnecessary iterations.
+
+### Similar Problems
+
+- Codeforces 1030A - In Search of an Easy Problem
+- Codeforces 96A - Football
+- Codeforces 266A - Stones on the Table
