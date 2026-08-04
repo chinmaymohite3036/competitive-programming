@@ -282,3 +282,73 @@ Do not continue unnecessary iterations.
 - Codeforces 1030A - In Search of an Easy Problem
 - Codeforces 96A - Football
 - Codeforces 266A - Stones on the Table
+
+---
+
+## Problem: 271A - Beautiful Year
+
+### Pattern
+
+Brute Force Search + Digit Extraction
+
+### When to Think of This Pattern
+
+- Need to find the next/previous valid number.
+- Each candidate can be checked independently.
+- Digits need to be examined individually.
+
+### Key Observation
+
+Increment the year one by one.
+
+For each year, extract its digits and check whether all digits are distinct.
+
+The first valid year is the answer.
+
+### Formula
+
+Extract digits:
+
+```java
+a = year % 10
+b = (year / 10) % 10
+c = (year / 100) % 10
+d = (year / 1000) % 10
+```
+
+Distinct condition:
+
+```
+a!=b
+a!=c
+a!=d
+b!=c
+b!=d
+c!=d
+```
+
+### Java Concepts Used
+
+- while(true)
+- break
+- Integer division
+- Modulo
+- Temporary copy variable
+
+### Mistake I Made
+
+Initially thought I needed to reconstruct the new year from the extracted digits.
+
+Later realized the original `year` variable is continuously incremented, while the extracted digits are only used for checking.
+
+### Lesson
+
+Digit extraction is often only for verification.
+
+Use a temporary copy when extracting digits so the original number remains unchanged.
+
+### Similar Problems
+
+- Codeforces 271A - Beautiful Year
+- Codeforces 110A - Nearly Lucky Number
+- Digit extraction problems
