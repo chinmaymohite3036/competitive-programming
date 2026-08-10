@@ -199,3 +199,55 @@ Always choose the data type based on constraints.
 - Sum of Digits
 - Count Digits
 - Digit Frequency
+
+---
+
+## Problem: 200B - Drinks
+
+### Pattern
+
+Average / Arithmetic Mean
+
+### When to Think of This Pattern
+
+- The problem asks for the average of multiple values.
+- Every value contributes equally to the final result.
+- Individual values are not needed after processing them.
+
+### Key Observation
+
+The percentage of orange juice in the final mixture is the arithmetic mean of all given percentages.
+
+Read each percentage, add it to a running sum, then divide the sum by `n`.
+
+### Formula
+
+Average = Sum of all values / Number of values
+
+### Java Concepts Used
+
+- Scanner
+- for loop
+- Running sum
+- double
+- Floating-point division
+
+### Mistake I Made
+
+none
+
+### Lesson
+
+Before storing input in an array, ask:
+
+"Do I need each individual value later?"
+
+If not, process it immediately using a running variable.
+
+Also remember that integer division can lose the fractional part, so use a floating-point value when the answer can be decimal.
+
+### Similar Problems
+
+- Codeforces 200B - Drinks
+- Average / Mean problems
+- Running Sum problems
