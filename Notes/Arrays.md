@@ -37,3 +37,57 @@ When the problem asks you to compare every element with one particular element, 
 
 ### Similar Problems
 ....
+
+## 405A - Gravity Flip
+
+### Pattern
+
+Sorting + Observation
+
+### When to Think of This Pattern
+
+- Elements represent positions, heights, or values that naturally rearrange.
+- The final state depends only on relative order.
+- A physical process described in the problem may have a simpler representation using sorting.
+
+### Key Observation
+
+Instead of simulating gravity block by block, observe the final arrangement.
+
+When gravity acts in the required direction, the column heights end up in non-decreasing order.
+
+Therefore, simply sort the array.
+
+### Formula
+
+None
+
+### Java Concepts Used
+
+- Arrays
+- Arrays.sort()
+- for loop
+- Array input and traversal
+- Output formatting
+
+### Mistake I Made
+
+Initially needed some time to recognize that the gravity process does not need to be simulated.
+
+The final arrangement can be obtained directly by sorting.
+
+### Lesson
+
+Do not always simulate the process exactly as described.
+
+Before simulating, ask:
+
+"Can I directly determine the final state?"
+
+Sometimes a physical process is just a sorting problem in disguise.
+
+### Similar Problems
+
+- Array sorting problems
+- Problems involving rearranging elements
+- Problems where simulation can be replaced by sorting
