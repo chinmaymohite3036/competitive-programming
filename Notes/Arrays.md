@@ -36,9 +36,10 @@ threshold = scores[k - 1]
 When the problem asks you to compare every element with one particular element, store that element first and then traverse the array.
 
 ### Similar Problems
-....
 
-## 405A - Gravity Flip
+---
+
+## Problem: 405A - Gravity Flip
 
 ### Pattern
 
