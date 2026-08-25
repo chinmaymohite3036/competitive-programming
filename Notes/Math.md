@@ -251,3 +251,59 @@ Also remember that integer division can lose the fractional part, so use a float
 - Codeforces 200B - Drinks
 - Average / Mean problems
 - Running Sum problems
+
+---
+
+## Problem: 1742A - Sum
+
+### Pattern
+
+Conditional Logic + Mathematical Observation
+
+### When to Think of This Pattern
+
+- The problem asks whether one value can be represented using the other values.
+- There are only a small number of possible relationships.
+- The conditions can be checked directly without loops over the values.
+
+### Key Observation
+
+One of the three numbers must equal the sum of the other two.
+
+Therefore, check all three possibilities:
+
+a + b = c
+a + c = b
+b + c = a
+
+If any condition is true, print YES. Otherwise, print NO.
+
+### Formula
+
+None
+
+### Java Concepts Used
+
+- Scanner
+- int
+- for loop
+- Logical OR (`||`)
+- Conditional statements
+
+### Mistake I Made
+
+Initially considered using `byte` because the constraints were only 0 to 20.
+
+Realized that `int` is the standard and more convenient choice for small integer arithmetic in Competitive Programming.
+
+### Lesson
+
+Always check constraints before choosing a data type, but don't over-optimize unnecessarily.
+
+For ordinary small integer calculations in CP, `int` is usually the practical default.
+
+### Similar Problems
+
+- Codeforces 1742A - Sum
+- Codeforces 231A - Team
+- Codeforces 1030A - In Search of an Easy Problem
